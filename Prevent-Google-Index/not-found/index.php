@@ -1,4 +1,13 @@
 <?php
+	//Determine what HTTP protocol to use
+	$protocol = "HTTP/1.0";
+	if ( "HTTP/1.1" == $_SERVER["SERVER_PROTOCOL"] ){
+		$protocol = "HTTP/1.1";
+	}
+
+	//Sends Header Responses
+	header( "$protocol 404 Not Found", true, 404 );
+	header("X-Robots-Tag: noindex, nofollow", true );
 	
 	?><html>
 <head>
