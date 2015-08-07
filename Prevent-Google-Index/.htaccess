@@ -1,0 +1,4 @@
+#Fed: Fix for hacked pages
+RedirectMatch 301 ^/(page1|page2)/?(.*) /not-found/#$1$2
+RedirectMatch 301 ^/(.*(spam1|spam2).*)/?(.*) /not-found/#$1
+#Fed: Fix for hacked ages
